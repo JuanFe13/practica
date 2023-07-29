@@ -1,0 +1,131 @@
+Microsoft Windows [Versión 10.0.19044.3086]
+(c) Microsoft Corporation. Todos los derechos reservados.
+
+C:\Users\InvitadoCID\Desktop\prueba>git init
+Initialized empty Git repository in C:/Users/InvitadoCID/Desktop/prueba/.git/
+
+C:\Users\InvitadoCID\Desktop\prueba>git remote add origin https://github.com/JuanFe13/practica.git
+
+C:\Users\InvitadoCID\Desktop\prueba>git remote
+origin
+
+C:\Users\InvitadoCID\Desktop\prueba>git remote -v
+origin  https://github.com/JuanFe13/practica.git (fetch)
+origin  https://github.com/JuanFe13/practica.git (push)
+
+C:\Users\InvitadoCID\Desktop\prueba>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        practica.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\InvitadoCID\Desktop\prueba>git add .
+
+C:\Users\InvitadoCID\Desktop\prueba>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   practica.txt
+
+
+C:\Users\InvitadoCID\Desktop\prueba>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   practica.txt
+
+
+C:\Users\InvitadoCID\Desktop\prueba>git commit -m "primer mensaje"
+[master (root-commit) f215f00] primer mensaje
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 practica.txt
+
+C:\Users\InvitadoCID\Desktop\prueba>git push origin
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+C:\Users\InvitadoCID\Desktop\prueba>git push origin master
+info: please complete authentication in your browser...
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 213 bytes | 213.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/JuanFe13/practica.git
+ * [new branch]      master -> master
+
+C:\Users\InvitadoCID\Desktop\prueba>git pull origin master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 662 bytes | 0 bytes/s, done.
+From https://github.com/JuanFe13/practica
+ * branch            master     -> FETCH_HEAD
+   f215f00..6adbe97  master     -> origin/master
+Updating f215f00..6adbe97
+Fast-forward
+ practica.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+C:\Users\InvitadoCID\Desktop\prueba>git add .
+
+C:\Users\InvitadoCID\Desktop\prueba>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   practica.txt
+
+
+C:\Users\InvitadoCID\Desktop\prueba>git commit -m "cambio carita"
+[master af0dec7] cambio carita
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\InvitadoCID\Desktop\prueba>git pull origin master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 660 bytes | 3.00 KiB/s, done.
+From https://github.com/JuanFe13/practica
+ * branch            master     -> FETCH_HEAD
+   6adbe97..e54231c  master     -> origin/master
+Auto-merging practica.txt
+CONFLICT (content): Merge conflict in practica.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+C:\Users\InvitadoCID\Desktop\prueba>git add .
+
+C:\Users\InvitadoCID\Desktop\prueba>git commit -m "se resolvio el conflicto"
+[master 56e341b] se resolvio el conflicto
+
+C:\Users\InvitadoCID\Desktop\prueba>git pull origin master
+From https://github.com/JuanFe13/practica
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+C:\Users\InvitadoCID\Desktop\prueba>git push origin master
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (6/6), 536 bytes | 536.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/JuanFe13/practica.git
+   e54231c..56e341b  master -> master
+
+C:\Users\InvitadoCID\Desktop\prueba>
